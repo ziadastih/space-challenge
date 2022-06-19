@@ -16,7 +16,7 @@
   --barlow: "Barlow Condensed", sans-serif;
 }
 /* ======body background===== */
-body {
+.main-bg {
   background: url(./background-home-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,7 +40,7 @@ body {
   margin-top: 10px;
   margin-left: 10px;
 }
-.toggle-image {
+.open-btn {
   margin-right: 20px;
 }
 /*  ========end of logo========= */
@@ -73,7 +73,7 @@ body {
 }
 
 /* =========adjusting the close btn==== */
-.close {
+.close-btn {
   float: right;
   margin-top: 20px;
   margin-right: 20px;
@@ -110,8 +110,8 @@ body {
 }
 /* =============end of nav bar========== */
 
-/* ======adjusting main ========= */
-.container {
+/* ======adjusting main home ========= */
+#home {
   width: 70%;
   min-height: 100vh;
   display: flex;
@@ -119,11 +119,16 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
+}
+
+.open-container {
+  display: flex;
 }
 /* ========main title============== */
 .container-text {
@@ -207,10 +212,9 @@ body {
 .nav-link:hover {
   border-bottom: 2px solid var(--HOVER);
 }
-.nav-link:active {
+.selected {
   border-bottom: 2px solid var(--white);
 }
-
 .explore:hover {
   box-sizing: content-box;
   border: 50px solid #979797;
@@ -228,10 +232,10 @@ body {
   }
 
   /* =====toggle and close display none */
-  .toggle-image {
+  .open-btn {
     display: none;
   }
-  .close {
+  .close-btn {
     display: none;
   }
   /* ====nav-bar=== */
@@ -303,4 +307,183 @@ body {
   .container-text {
     width: 50%;
   }
+}
+
+/* =======DESTINATION SECTION */
+#destination {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* =========destination header =======*/
+.dest-header {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+
+  color: var(--white);
+}
+.dest-header span {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  color: var(--white);
+  opacity: 0.4;
+}
+
+.planet-img img {
+  width: 170px;
+  height: 170px;
+  margin-top: 32px;
+}
+
+/* =====info container========= */
+.planets-content {
+  display: flex;
+  align-items: center;
+  flex-direction: center;
+  flex-direction: column;
+  width: 400px;
+}
+/*  ========destination nav list========= */
+.planets-list {
+  margin-top: 32px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+}
+.planet {
+  width: max-content;
+}
+.planets-list a {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  letter-spacing: 2.3625px;
+  gap: 2rem;
+}
+
+.planet:hover {
+  border-bottom: 2px solid var(--HOVER);
+}
+
+/* =======planets info========= */
+.planet-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.planet-title {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.text {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #383b4b;
+  text-align: center;
+  color: var(--lightgrey);
+}
+.stats {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+}
+/* ==========destination - distance - container==== */
+.distance-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.distance-info span {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 17px;
+
+  text-align: center;
+  letter-spacing: 2.3625px;
+  text-transform: uppercase;
+  color: var(--lightgrey);
+}
+.distance {
+  margin-top: 10px;
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--white);
+}
+/* ==========destination - time - container==== */
+.time-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-info span {
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 17px;
+
+  text-align: center;
+  letter-spacing: 2.3625px;
+  text-transform: uppercase;
+  color: var(--lightgrey);
+}
+.time {
+  margin-top: 10px;
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--white);
 }

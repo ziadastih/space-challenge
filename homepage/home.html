@@ -12,75 +12,121 @@
     <title>EARTH</title>
   </head>
   <body>
-    <!-- =========navigation=== -->
-    <nav class="nav-bar">
-      <div class="nav-center">
-        <!-- ========logo and toggle menu=== -->
-        <div class="mobile-logo-toggle">
-          <div class="logo">
-            <a href="#"><img src="./logo.svg" alt="logo" /></a>
+    <main class="main-bg">
+      <!-- =========navigation=== -->
+      <nav class="nav-bar">
+        <div class="nav-center">
+          <!-- ========logo and toggle menu=== -->
+          <div class="mobile-logo-toggle">
+            <div class="logo">
+              <a href="#"><img src="./logo.svg" alt="logo" /></a>
+            </div>
+            <!-- =========toggle------ -->
+            <div class="line"></div>
+            <div class="open-btn">
+              <a href="#"><img src="./icon-hamburger.svg" alt="" /></a>
+            </div>
           </div>
-          <!-- =========toggle------ -->
-          <div class="line"></div>
-          <div class="toggle-image">
-            <a href="#"><img src="./icon-hamburger.svg" alt="" /></a>
+          <!-- =========enf of toggle=========== -->
+
+          <!-- /=========start of nav-links=============== -->
+          <div class="nav-menu">
+            <img src="./icon-close.svg" alt="" class="close-btn" />
+
+            <ul>
+              <li class="nav-link">
+                <a href="#" data-id="home">
+                  <p class="number">00</p>
+                  <p>HOME</p></a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="#" data-id="destination">
+                  <p class="number">01</p>
+                  <p>destination</p></a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="#" data-id="crew">
+                  <p class="number">02</p>
+                  <p>crew</p></a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="#" data-id="technology">
+                  <p class="number">03</p>
+                  <p>technology</p></a
+                >
+              </li>
+            </ul>
           </div>
         </div>
-        <!-- =========enf of toggle=========== -->
+      </nav>
+      <!-- ==========end of navbar=== -->
 
-        <!-- /=========start of nav-links=============== -->
-        <div class="nav-menu">
-          <img src="./icon-close.svg" alt="" class="close" />
+      <!--------------------------------------- homepage-container--------------------- -->
+      <section class="home-container" id="home">
+        <div class="container-content">
+          <div class="container-text">
+            <h2>so,you want to travel to</h2>
+            <h1>space</h1>
+            <p>
+              Let’s face it; if you want to go to space, you might as well
+              genuinely go to outer space and not hover kind of on the edge of
+              it. Well sit back, and relax because we’ll give you a truly out of
+              this world experience!
+            </p>
+          </div>
+          <div class="explore-container">
+            <div class="explore"><p>explore</p></div>
+          </div>
+        </div>
+      </section>
+      <!-- ===========destination container========= -->
+      <section class="destination-container" id="destination">
+        <h2 class="dest-header"><span>01</span> pick your Destiantion</h2>
+        <div class="planet-img">
+          <img src="../destination/image-moon.png" alt="" class="image" />
+        </div>
+        <div class="planets-content">
+          <div class="planets-nav">
+            <ul class="planets-list">
+              <li class="planet" data-id="0"><a href="#">moon</a></li>
+              <li class="planet" data-id="1"><a href="#">mars</a></li>
+              <li class="planet" data-id="2"><a href="#">europa</a></li>
+              <li class="planet" data-id="3"><a href="#">titan</a></li>
+            </ul>
+          </div>
+          <div class="planet-info">
+            <h1 class="planet-title">Moon</h1>
+            <p class="text">
+              "See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed.
+              While you’re there, take in some history by visiting the Luna 2
+              and Apollo 11 landing sites."
+            </p>
+            <div class="stats">
+              <article class="distance-info">
+                <span>AVG. DISTANCE</span>
+                <p class="distance">384,400 km</p>
+              </article>
+              <article class="time-info">
+                <span>Est. travel time</span>
+                <p class="time">3 days</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <ul>
-            <li class="nav-link">
-              <a href="#">
-                <p class="number">00</p>
-                <p>HOME</p></a
-              >
-            </li>
-            <li class="nav-link">
-              <a href="../destination/destination.html">
-                <p class="number">01</p>
-                <p>destination</p></a
-              >
-            </li>
-            <li class="nav-link">
-              <a href="../crew/crew.html">
-                <p class="number">02</p>
-                <p>crew</p></a
-              >
-            </li>
-            <li class="nav-link">
-              <a href="../technology/technology.html">
-                <p class="number">03</p>
-                <p>technology</p></a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- ==========end of navbar=== -->
-    <main class="container">
-      <div class="container-content">
-        <div class="container-text">
-          <h2>so,you want to travel to</h2>
-          <h1>space</h1>
-          <p>
-            Let’s face it; if you want to go to space, you might as well
-            genuinely go to outer space and not hover kind of on the edge of it.
-            Well sit back, and relax because we’ll give you a truly out of this
-            world experience!
-          </p>
-        </div>
-        <div class="explore-container">
-          <div class="explore"><p>explore</p></div>
-        </div>
-      </div>
+      <!-- ==========crew-container============ -->
+      <section class="crew-container" id="crew"></section>
+
+      <!-- ============technology container============ -->
+      <section class="technology-container" id="technology"></section>
     </main>
     <!-- =======end of main====== -->
     <!-- ==========js  and js library========-->
-    <script src="../space.js"></script>
+    <script src="./space.js"></script>
   </body>
 </html>

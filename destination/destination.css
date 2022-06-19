@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+/* ======roots======== */
+:root {
+  --black: hsl(230, 35%, 7%);
+  --lightgrey: hsl(231, 77%, 90%);
+  --white: hsl(0, 0%, 100%);
+  --HOVER: #979797;
+  /* =====fonts====== */
+  --bellefair: "Bellefair", serif;
+  --barlow: "Barlow Condensed", sans-serif;
+}
+/* ======body background===== */
+body {
+  background: url(./background-destination-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* ===== nav-bar============ */
+.nav-bar {
+  width: 100%;
+}
+
+/* =======adjusting header and logo for mobile */
+.mobile-logo-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.logo {
+  /* display: block; */
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.open-btn {
+  margin-right: 20px;
+}
+/*  ========end of logo========= */
+
+/* =========start of nav-links for mobile======== */
+
+/* =======creating the side bar by using position fixed and translatex 100%  in order to hide it ==== */
+.nav-menu {
+  position: fixed;
+  right: 0;
+  top: 0%;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.04);
+  /* =======not supported on firefox==== */
+  backdrop-filter: blur(81.5485px);
+  width: 60%;
+  z-index: 2;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+/* =======adjusting the list inside the sidebar=== */
+.nav-menu ul {
+  margin-top: 80px;
+  margin-left: 32px;
+}
+
+.nav-menu li {
+  list-style-type: none;
+  padding-bottom: 32px;
+}
+
+/* =========adjusting the close btn==== */
+.close-btn {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+/* ======the java class====== */
+.open-menu {
+  transform: translateX(0%);
+}
+
+/* ===========flex and aligning numbers and links== */
+.nav-link {
+  padding-top: 22px;
+  width: max-content;
+}
+
+.nav-link a {
+  width: max-content;
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+/* =========font weight diferent on numbers=== */
+.number {
+  font-weight: 700;
+}
+/* =============end of nav bar========== */
+
+/* ====setting the hovers====== */
+.nav-link:hover {
+  border-bottom: 2px solid var(--HOVER);
+}
+.nav-link:active {
+  border-bottom: 2px solid var(--white);
+}
+.destination {
+  border-bottom: 2px solid white;
+}
+
+@media (min-width: 768px) {
+  /* =====body bg=== */
+  body {
+    background: url(./background-destination-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  /* =====toggle and close display none */
+  .open-btn {
+    display: none;
+  }
+  .close-btn {
+    display: none;
+  }
+  /* ====nav-bar=== */
+  .nav-bar {
+    height: 10vh;
+  }
+  .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .nav-menu {
+    transform: translate(0);
+    position: static;
+    height: 0vh;
+    min-height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-menu ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 10px;
+    height: 10vh;
+  }
+}
+/* ======end fot tablet=== */
+/* ========media for laptop/desktop */
+
+@media only screen and (min-width: 990px) {
+  body {
+    background: url(./background-destination-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  /* ==============adding the line inside the logo div and giving the menu bar - margin  so the line gets into it  */
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: #979797;
+    opacity: 0.3;
+    z-index: 3;
+  }
+  .mobile-logo-toggle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+  }
+  .nav-menu {
+    margin-left: -10px;
+  }
+}
