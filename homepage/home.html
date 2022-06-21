@@ -34,7 +34,7 @@
             <img src="./icon-close.svg" alt="" class="close-btn" />
 
             <ul>
-              <li class="nav-link">
+              <li class="nav-link selected" data-id="home">
                 <a href="#" data-id="home">
                   <p class="number">00</p>
                   <p>HOME</p></a
@@ -65,7 +65,7 @@
       <!-- ==========end of navbar=== -->
 
       <!--------------------------------------- homepage-container--------------------- -->
-      <section class="home-container" id="home">
+      <section class="home-container content" id="home">
         <div class="container-content">
           <div class="container-text">
             <h2>so,you want to travel to</h2>
@@ -83,47 +83,49 @@
         </div>
       </section>
       <!-- ===========destination container========= -->
-      <section class="destination-container" id="destination">
+      <section class="destination-container content" id="destination">
         <h2 class="dest-header"><span>01</span> pick your Destiantion</h2>
-        <div class="planet-img">
-          <img src="../destination/image-moon.png" alt="" class="image" />
-        </div>
-        <div class="planets-content">
-          <div class="planets-nav">
-            <ul class="planets-list">
-              <li class="planet" data-id="0"><a href="#">moon</a></li>
-              <li class="planet" data-id="1"><a href="#">mars</a></li>
-              <li class="planet" data-id="2"><a href="#">europa</a></li>
-              <li class="planet" data-id="3"><a href="#">titan</a></li>
-            </ul>
+        <div class="row">
+          <div class="planet-img">
+            <img src="../destination/image-moon.png" alt="" class="image" />
           </div>
-          <div class="planet-info">
-            <h1 class="planet-title">Moon</h1>
-            <p class="text">
-              "See our planet as you’ve never seen it before. A perfect relaxing
-              trip away to help regain perspective and come back refreshed.
-              While you’re there, take in some history by visiting the Luna 2
-              and Apollo 11 landing sites."
-            </p>
-            <div class="stats">
-              <article class="distance-info">
-                <span>AVG. DISTANCE</span>
-                <p class="distance">384,400 km</p>
-              </article>
-              <article class="time-info">
-                <span>Est. travel time</span>
-                <p class="time">3 days</p>
-              </article>
+          <div class="planets-content">
+            <div class="planets-nav">
+              <ul class="planets-list">
+                <li class="planet" data-id="0"><a href="#">moon</a></li>
+                <li class="planet" data-id="1"><a href="#">mars</a></li>
+                <li class="planet" data-id="2"><a href="#">europa</a></li>
+                <li class="planet" data-id="3"><a href="#">titan</a></li>
+              </ul>
+            </div>
+            <div class="planet-info">
+              <h1 class="planet-title">Moon</h1>
+              <p class="text">
+                "See our planet as you’ve never seen it before. A perfect
+                relaxing trip away to help regain perspective and come back
+                refreshed. While you’re there, take in some history by visiting
+                the Luna 2 and Apollo 11 landing sites."
+              </p>
+              <div class="stats">
+                <article class="distance-info">
+                  <span>AVG. DISTANCE</span>
+                  <p class="distance">384,400 km</p>
+                </article>
+                <article class="time-info">
+                  <span>Est. travel time</span>
+                  <p class="time">3 days</p>
+                </article>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ==========crew-container============ -->
-      <section class="crew-container" id="crew"></section>
+      <section class="crew-container content" id="crew"></section>
 
       <!-- ============technology container============ -->
-      <section class="technology-container" id="technology"></section>
+      <section class="technology-container content" id="technology"></section>
     </main>
     <!-- =======end of main====== -->
     <!-- ==========js  and js library========-->

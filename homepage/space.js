@@ -4,28 +4,53 @@ const closeBtn = document.querySelector(".close-btn");
 const openBtn = document.querySelector(".open-btn");
 const navMenu = document.querySelector(".nav-menu");
 const navLink = document.querySelectorAll(".nav-link");
-const homePage = document.getElementById("home");
+const contents = document.querySelectorAll(".content");
+const mainBg = document.querySelector(".main-bg");
+
+navMenu.addEventListener("click", function (e) {
+  let id = e.target.parentElement.dataset.id;
+  // ========getting a number to use our array and change background===
+  let number = e.target.previousSibling.previousSibling;
+  mainNumber = parseInt(number.textContent);
+  mainBg.style.background = `url(${bgs[mainNumber]}) no-repeat 
+  `;
+  mainBg.style.backgroundSize = `cover`;
+
+  //  ===========display specific section =============
+  contents.forEach(function (content) {
+    content.style.display = "none";
+  });
+  let element = document.getElementById(id);
+
+  element.style.display = "flex";
+
+  // ==========selected class =============
+  navLink.forEach(function (link) {
+    link.addEventListener("click", function () {
+      navLink.forEach(function (item) {
+        if (item !== link) {
+          item.classList.remove("selected");
+        }
+        link.classList.add("selected");
+      });
+    });
+  });
+});
 
 // arrrays of bg
 const bgs = [
-  {
-    home: "./background-home-mobile.jpg",
-  },
-  {
-    destination: "./background-destination-mobile.jpg",
-  },
-  {
-    crew: "./background-crew-tablet.jpg",
-  },
-  {
-    technology: "./background-technology-tablet.jpg",
-  },
+  "./background-home-mobile.jpg",
+
+  "../destination/background-destination-mobile.jpg",
+
+  "../crew/background-crew-mobile.jpg",
+  "../technology/background-technology-mobile.jpg",
 ];
 
 // when page load we want homepage container displayed
-window.addEventListener("DOMContentLoaded", function () {
-  homePage.classList.add("open-container");
-});
+// window.addEventListener("DOMContentLoaded", function () {
+//   homePage.style.display = "flex";
+// });
 // =====event listener for open-btn and close-btn
 openBtn.addEventListener("click", function () {
   navMenu.classList.add("open-menu");
@@ -35,19 +60,6 @@ openBtn.addEventListener("click", function () {
 });
 
 // ============= nav bar get items by id ===============
-navLink.forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    let element = e.target.parentElement.dataset.id;
-
-    navLink.forEach(function (item) {
-      if (item !== link) {
-        item.classList.remove("selected");
-      }
-
-      link.classList.add("selected");
-    });
-  });
-});
 
 // ==========DESTINATION PAGE==========
 
